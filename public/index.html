@@ -1,43 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" type="text/css" href="public.css">
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>No Longer React App </title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <!-- Bootstrap Navbar Starts here -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="/public/logo512(smaller).png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-white bg-dark" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white bg-dark" href="#">Gallery</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white bg-dark " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Contact Info</a></li>
+                <li><a class="dropdown-item" href="#">Licences</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Donate</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+<!--End of navbar-->
 
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel"  >
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="/arcus innovations hub assets/car.jpg" alt="First slide" width="1000" height="450" >
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Manufacturing</h5>
+          <p>We work to produce the best quality product that is feasibly possible</p>
+        </div>
+    </div>
+    <div class="carousel-item ">
+      <img class="d-block w-100" src="/arcus innovations hub assets/electricCBU.jpg" alt="Second slide" width="1000" height="450" >
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Manufacturing</h5>
+          <p>We work to produce the best quality product that is feasibly possible</p>
+        </div>
+    </div>
+    <div class="carousel-item ">
+      <img class="d-block w-100" src="/arcus innovations hub assets/students (6).jpg" alt="Third slide" width="1000" height="450" >
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Manufacturing</h5>
+          <p>We work to produce the best quality product that is feasibly possible</p>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/arcus innovations hub assets/electric car arcus (1).jpg" alt="Fourth slide" width="1000" height="450" >
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Manufacturing</h5>
+          <p>We work to produce the best quality product that is feasibly possible</p>
+        </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  
+</div>
+<div class="flex-container">
+  <div class="column">
+  <h1>Arc</h1>  
+  <p>The Arcus Innovation Hub in Zambia is dedicated to fostering innovation, entrepreneurship, and industrialization. They provide practical learning opportunities, including PCB building and partnership development through university clubs, to support students and startups.</p>
+  </div>
+  <div class="column">Column 2</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
       You can add webfonts, meta tags, or analytics to this file.
       The build step will place the bundled scripts into the <body> tag.
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
