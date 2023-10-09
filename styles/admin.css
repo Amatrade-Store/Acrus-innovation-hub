@@ -1,0 +1,250 @@
+* {
+  background-color: none;
+  font-family: Arial, sans-serif;
+  font-weight: 100;
+  transition: 0.3s cubic-bezier(0.9, 0, 0.8, 0.2);
+  text-decoration: none;
+  position: relative;
+}
+html{
+  overflow: hidden;
+}
+nav {
+  position: fixed;
+  top: 2px;
+  width: 95%;
+
+}
+.navbar .navbar-brand{
+color: white;
+font-weight: 600;
+font-size: 30px;
+}
+
+button.navbar-toggler{
+  color: wheat;
+  background-color: whitesmoke;
+}
+.nav-item a{
+  margin: 0;
+  padding: 0;
+  
+}
+.nav-item, .nav-item a{
+  color: aliceblue;
+
+}
+
+.nav-item a.red{
+  color: red;
+}
+
+section {
+  font-weight: 400;
+
+  width: 100%;
+  min-height: 100%;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    overflow: hidden;
+  padding: 0px;
+  margin: 0;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  height: 100vh;
+  background-image: url("../assets/1.png");
+}
+
+.screen {
+  background-color: #012124ea;
+  position: fixed;
+  width: 95%;
+  height: 95%;
+  max-height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 25;
+  display: flex;
+  transform: translateX(-110%);
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  transition: 250ms ease-in;
+  padding: 10px;
+  box-shadow: 0px 0px 10px 1px;
+
+}
+
+.overLay {
+  position: fixed;
+  width: 105%;
+  height: 105%;
+  background-color: rgba(0, 0, 0, 0.478);
+  opacity: 0;
+  z-index: -1;
+}
+
+.overLay.active {
+  z-index: 45;
+  opacity: 1;
+}
+
+.screen.active {
+  transform: translateX(0%);
+}
+
+.optionsContainer{
+  
+color: rgb(255, 255, 255);
+  height: fit-content;
+  width: fit-content;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.backButton{
+  color: whitesmoke;
+  font-size: 40px;
+  position: absolute;
+  top: 8px;
+  right: 20px;
+}
+
+.optionsContainer span{
+  padding:10px;
+  width: 100px;
+  border: 2px solid white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 17px;
+}
+
+.screen h2{
+  color: white;
+}
+
+.screen form{
+  display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+min-height: 35%;
+max-height: 40%;
+}
+.screen .uploadSection{
+
+}
+.screen .scrollable{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  overflow-y: scroll;
+  min-height: 40%;
+  max-height: 50%;
+}
+.hide{
+  display:none;
+}
+
+.screen label{
+  padding: 10px;
+  border: 3px solid white;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+}
+.screen form{ 
+
+}
+
+.screen input{
+  background-color: transparent;
+  border: 4px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  columns: white;
+  text-align: left;
+  padding: 5px;
+}
+.screen button.upload-button{
+  background-color: rgb(235, 153, 38);
+  padding: 8px;
+  margin: 10px;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+}
+
+
+.event-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  height: 100%;
+}
+
+/* Style for the event image */
+.event-image {
+  max-width: 150px;
+  max-height: 150px;
+  margin-right: 10px;
+}
+
+/* Style for the event description */
+.event-description {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Style for the delete button */
+.screen button.delete-button {
+  background-color: #e22a00;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.screen form.messageForm{
+  
+  flex-direction: row;
+
+}
+form textarea{
+background-color: transparent;
+border: 3px solid white;
+border-radius: 10px;
+}
