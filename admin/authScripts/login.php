@@ -2,7 +2,7 @@
 session_start(); // Start a session
 
 // Include the database configuration
-include_once($_SERVER['DOCUMENT_ROOT'] . '/arcus/db/config.php');
+include_once($_SERVER['DOCUMENT_ROOT'] . '/Acrus-innovation-hub/db/config.php');
 
 // Hardcoded admin username and password for testing (replace with your actual admin credentials)
 $adminUsername = 'admin';
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['loggedin'] = true;
                     $_SESSION['user_id'] = "adminId";
                     $_SESSION['username'] = "admin";
-        header('Location: /arcus/admin/dashboard.php');
+        header('Location: /Acrus-innovation-hub/admin/dashboard.php');
         exit();
     } else {
         $error = "Invalid username or password.";
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Check if the user is already logged in
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-    header('Location: /arcus/admin/dashboard.php'); // Redirect to the dashboard
+    header('Location: /Acrus-innovation-hub/admin/dashboard.php'); // Redirect to the dashboard
     exit();
 }
 
@@ -45,9 +45,12 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
 //     $stmt->execute();
 //     $result = $stmt->get_result();
 
-//     if ($result->num_rows == 1) {
+//     if ($result->num_rows >= 1) {
 //         $row = $result->fetch_assoc();
-
+//         echo "User ID: " . $row['id']; // Display the user's ID
+//         echo "Username: " . $row['username']; // Display the username
+//         echo "Password: " . $row['password']; // Display the user's ID
+     
 //         // Verify the password
 //         if (password_verify($password, $row['password'])) {
 //             // Password is correct, set session variables
@@ -55,7 +58,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
 //             $_SESSION['user_id'] = $row['id'];
 //             $_SESSION['username'] = $row['username'];
 
-//             header('Location: /arcus/admin/dashboard.php'); // Redirect to the dashboard
+//             header('Location: /Acrus-innovation-hub/admin/dashboard.php'); // Redirect to the dashboard
 //             exit();
 //         } else {
 //             $error = "Invalid password";
@@ -73,7 +76,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="../styles/auth.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/auth.css">
 
 </head>
 <body>

@@ -8,6 +8,6 @@ $_SESSION = array();
 session_destroy();
 
 // Redirect to the login page after logout
-header('Location: /arcus/admin/login.php');
+header('Location: /Acrus-innovation-hub/admin/login.php');
 exit();
 ?>

@@ -5,6 +5,6 @@
 		$uri = 'http://';
 	}
 	$uri .= $_SERVER['HTTP_HOST'];
-	header('Location: '.$uri.'/arcus/Home.php');
+	header('Location: '.$uri.'/Acrus-innovation-hub/Home.php');
 	exit;
 ?>

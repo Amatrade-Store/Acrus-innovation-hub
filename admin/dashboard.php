@@ -1,6 +1,8 @@
 <?php
 session_start(); // Start a session
 
+include_once($_SERVER['DOCUMENT_ROOT'] . '/Acrus-innovation-hub/db/config.php');
+
 // include_once($_SERVER['DOCUMENT_ROOT'] . '/arcus/admin/db/config.php');
 
 // // Fetch contact messages from the database
@@ -11,7 +13,7 @@ session_start(); // Start a session
 // $eventData = getEventData();
 // Check if the user is logged in
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header('Location: login.php'); // Redirect to the login page
+    header('Location: authScripts/login.php'); // Redirect to the login page
     exit();
 }
 
@@ -99,8 +101,29 @@ if (isset($_POST['delete']) && isset($_POST['eventIndex'])) {
         $error = "Invalid event index.";
     }
 }
+
+
 ///contact message 
 
+
+$query = "SELECT * FROM messages";
+
+$result = mysqli_query($conn, $query);
+
+$messageTableSQL = "CREATE TABLE IF NOT EXISTS messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    names VARCHAR(255) NOT NULL,
+    organizationName VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    message TEXT NOT NULL
+)";
+
+// Execute the SQL table creation query
+if ($conn->query($messageTableSQL) === TRUE) {
+    echo "Table 'messages' created successfully.";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
 ?>
 
 <!DOCTYPE html>
@@ -129,13 +152,13 @@ if (isset($_POST['delete']) && isset($_POST['eventIndex'])) {
                 </li>
                 <li class="nav-item">
 
-                    <a href="Help.php">Help</a>
+                    <a href="./viewScripts/Help.php">Help</a>
                 </li>
                 <li class="nav-item">
                     About
                 </li>
                 <li class="nav-item">
-                    <a href="logout.php" class="btn red">Logout</a> <!-- Add a logout button -->
+                    <a href="./authScript/logout.php" class="btn red">Logout</a> <!-- Add a logout button -->
                 </li>
             </ul>
         </div>
@@ -152,104 +175,37 @@ if (isset($_POST['delete']) && isset($_POST['eventIndex'])) {
     <?php endif; ?>
 
     <div class="optionsContainer">
-        <span class="screenButton" id="events">Events</span>
-        <span class="screenButton" id="projects">Projects</span>
-        <span class="screenButton" id="messages">Messages</span>
+       <div>
+       <span class="screenButton floatingButton">
+            <a href="./viewScripts/events.php">View Events</a>
+        </span>
+        <span class="screenButton controlButton" id="events">Events</span>
+        <span class="screenButton floatingButton">
+            <a href="./uploadScripts/upload_event.php">Upload Event</a>
+        </span>
+       </div>
+      <div>
+         
+      <span class="screenButton floatingButton">
+            <a href="./viewScripts/projects.php">View Projects</a>
+        </span>
+        <span class="screenButton controlButton " id="projects">Projects</span>
+        <span class="screenButton floatingButton">
+            <a href="./uploadScripts/upload_project.php">Upload Project</a>
+        </span>
+      </div>
+
+      <div>
+      <span class="screenButton floatingButton">
+            <a href="./viewScripts/messages.php">View Messages</a>
+        </span>
+        <span class="screenButton controlButton" id="">Messages</span>
+        <span class="screenButton floatingButton">
+            <a href="./uploadScripts/publish_message.php">Publish Message</a>
+        </span>
+      </div>
     </div>
 
-    <section class="screen" id="events">
-        <div class="backButton">&times;</div>
-
-
-        <!-- Event upload form -->
-        <h2>Upload</h2>
-
-        <form method="post" action="" enctype="multipart/form-data">
-
-            <input class="hide" type="file" name="image" accept="image/*" required>
-            <label for="image">upload image</label>
-            <input class="textInput" type="text" name="description" placeholder="enter description" required>
-            <button class="upload-button" type="submit">Upload Event</button>
-        </form>
-
-        <h2>Events</h2>
-        <br>
-        <div class="scrollable">
-            <div>
-                <div class="event-container">
-                    <img class="event-image" src="event-image.jpg" alt="Event Image">
-                    <div class="event-description">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <button class="delete-button">Delete</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Display uploaded events with descriptions and delete buttons -->
-
-
-    </section>
-
-    <section class="screen" id="projects">
-        <div class="backButton">&times;</div>
-
-
-        <!-- Event upload form -->
-        <h2>Upload</h2>
-
-        <form method="post" action="" enctype="multipart/form-data">
-
-            <input class="hide" type="file" name="image" accept="image/*" required>
-            <label for="image">upload image</label>
-            <input class="textInput" type="text" name="description" placeholder="enter description" required>
-            <button class="upload-button" type="submit">Upload Event</button>
-        </form>
-
-        <h2>Projects</h2>
-        <br>
-        <div class="scrollable">
-            <div>
-                <div class="event-container">
-                    <img class="event-image" src="event-image.jpg" alt="Event Image">
-                    <div class="event-description">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <button class="delete-button">Delete</button>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="screen" id="messages">
-        <div class="backButton">&times;</div>
-
-
-        <!-- Message publish form -->
-        <h1>Arcus Messages</h1>
-        <h2>Publish A Message</h2>
-        <form class="messageForm" method="post" action="" enctype="multipart/form-data">
-
-            <textarea class="textInput" type="text" name="publicMessage" placeholder="Enter Message"
-                required></textarea>
-            <button class="upload-button" type="submit">Send</button>
-        </form>
-
-        <h2>Messages</h2>
-        <div class="scrollable">
-
-            <div>
-                <div class="event-container">
-                    <img class="event-image" src="event-image.jpg" alt="Event Image">
-                    <div class="event-description">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <button class="delete-button">Delete</button>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <script src="../js/admin.js"></script>
 
