@@ -31,13 +31,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
   } else {
     echo "Error: " . $sql . "<br>" . $stmt->error;
   }
-} else {
-  echo "something went wrong";
 }
 
 
 ?>
-
+<!-- <ul class="menu-list">
+          <div class="menu-list__item">Mission & Vision</div>
+          <div class="menu-list__item">Our Project</div>
+          <div class="menu-list__item">Objective</div>
+          <div class="menu-list__item">Core Value</div>
+          <div class="menu-list__item">About</div>
+          <div class="menu-list__item">Reach Us</div>
+        </ul> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,36 +61,69 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="./styles/Ncss/bootstrap.css">
 </head>
 
 <body>
   <div class="bodyContainer">
-    <!-- start section -->
-    <section class="home">
-      <nav class="navigation-menu js-nav-menu">
-        <div class="navigation-menu__toggle js-nav-menu-toggle">
-          <span class="navigation-menu__bars"></span>
+    <br>
+<nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="">logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <!-- Add links to gallery, events, and contact sections -->
+                <li class="nav-item">
+                    <a href="../Home.php"> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Help.php">Mission & Vision</a>
+                </li>
+                <li class="nav-item">
+                <a href="">Projects</a>
+                </li>
+                <li class="nav-item">
+<a href="">                    Objectives</a>                </li>
+                <li class="nav-item">
+                    <a href="">Values</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">Partners & Sponsors</a>
+                </li> 
+                <li class="nav-item">
+                    <a href="">Contact Us</a>
+                </li>
+
+            </ul>
         </div>
-        <ul class="menu-list">
-          <div class="menu-list__item">Mission & Vision</div>
-          <div class="menu-list__item">Our Project</div>
-          <div class="menu-list__item">Objective</div>
-          <div class="menu-list__item">Core Value</div>
-          <div class="menu-list__item">About</div>
-          <div class="menu-list__item">Reach Us</div>
-        </ul>
-      </nav>
-      <h2>
+    </nav>
+    <!-- start section -->
+
+    </section>
+    <section class="home">
+
+
+      <h2 class="title">
         <span>Arcus</span><br />
         Innovation Hub
       </h2>
       <br />
       <h4>
         Where innovation meets opportunity. Discover what's next with us!
+        The hub offers sponsorship for student projects, a dedicated workspace with internet access, and
+        organizes an annual accelerator program.
       </h4>
 
-      <div class="whiteButton">explore</div>
+      <div class="exploreHolder">
+        <div class="whiteButton">Explore</div>
 
+      </div>
       <div class="homeMain">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
           <div class="carousel-inner">
@@ -137,49 +175,44 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
       <br />
       <br />
       <h3>Our Mission:</h3>
-      <div class="content-container">
-        <p>
-          The mission of the Arcus Innovation Hub is to foster a culture of
-          innovation, entrepreneurship, and industrialization in Zambia.
-          <br />
-          We aim to empower students and startups by providing them with the
-          necessary skills, resources, mentorship, and networking
-          opportunities to drive technological advancements, develop
-          sustainable solutions, and contribute to the country's economic
-          prosperity.
-        </p>
-        <div class="read-more-button">
-          <span class="material-symbols-outlined">
-            keyboard_double_arrow_down
-          </span>
-        </div>
-      </div>
+      <br>
+      <p class="blurBox">
+        The mission of the Arcus Innovation Hub is to foster a culture of
+        innovation, entrepreneurship, and industrialization in Zambia.
+        <br />
+        We aim to empower students and startups by providing them with the
+        necessary skills, resources, mentorship, and networking
+        opportunities to drive technological advancements, develop
+        sustainable solutions, and contribute to the country's economic
+        prosperity.
+      </p>
+
       <div class="missionImages">
         <img src="assets\solarsystem.jpg" alt="" />
+        <div class="blackCircle"></div>
         <img src="assets\electriccar2.jpg" alt="" />
       </div>
       <h3>Vision:</h3>
-      <div class="content-container">
-        <p>
+      <br>
+
+      <div class="">
+        <p class="blurBox">
           Our vision is to become a leading innovation hub in Zambia,
           recognized for driving technological advancements, nurturing
           entrepreneurial talent, and supporting startups in developing
-          sustainable solutions. We envision a future where the Arcus
+          sustainable solutions.
+          <br>
+          We envision a future where the Arcus
           Innovation Hub plays a pivotal role in transforming ideas into
           marketable products, contributing to Zambia's industrialization,
           economic growth, and global competitiveness.
         </p>
 
-        <div class="read-more-button">
-          <span class="material-symbols-outlined">
-            keyboard_double_arrow_down
-          </span>
-        </div>
       </div>
     </section>
     <section class="project">
 
-      <h2>Our Projects</h2>
+      <h2> <span class="blue">Our</span> Projects</h2>
 
 
       <?php
@@ -192,22 +225,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
               <h3>
                 <?php echo $row['projectTitle']; ?>
               </h3>
-              <div>
-              <img src="<?php echo $row['projectImage']; ?>" alt="image" />
-
-            </div>
-              <div class="content-container">
-                <p>
+              <div class="image-grid">
+                <div class="main-image">
+                  <img src="<?php echo $row['projectImage']; ?>" alt="Main Image" />
+                </div>
+                <img src="<?php echo $row['projectImage2']; ?>" alt="Image 2" />
+                  <img src="<?php echo $row['projectImage3']; ?>" alt="Image 3" />
+                
+              </div>
+              <br>
+              <div class="">
+                <p class="blurBox">
                   <?php echo $row['projectDescription']; ?>
                 </p>
-                <div class="read-more-button">
-                  <span class="material-symbols-outlined">
-                    keyboard_double_arrow_down
-                  </span>
-                </div>
               </div>
             </div>
-           
+
           </div>
 
           <?php
@@ -222,115 +255,175 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
 
     <!-- objectives section -->
     <section class="objectives">
-      <h1>Our Objectives</h1>
-      <div>
-        <div class="content-container">
-          <p>
-            1. To provide practical learning experiences and hands-on training
-            to students, enabling them to develop technical skills and
-            innovative problem-solving capabilities.
-          </p>
-          <div class="read-more-button">
-            <span class="material-symbols-outlined">
-              keyboard_double_arrow_down
-            </span>
+      <h1>Our <span class="blue">Objectives</span></h1>
+      <div id="accordion">
+
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                aria-controls="collapseOne">
+                Provide practical learning experiences
+              </button>
+            </h5>
           </div>
-        </div>
-        <br />
-        <div class="content-container">
-          <p>
-            2. To support university clubs and facilitate cross-disciplinary
-            collaboration, fostering an environment that nurtures creativity
-            and entrepreneurial thinking.
-          </p>
-          <div class="read-more-button">
-            <span class="material-symbols-outlined">
-              keyboard_double_arrow_down
-            </span>
-          </div>
-        </div>
-        <br />
-        <div class="content-container">
-          <p>
-            3. To sponsor student projects and provide a dedicated workspace
-            equipped with the tools and resources required for prototyping and
-            product development.
-          </p>
-          <div class="read-more-button">
-            <span class="material-symbols-outlined">
-              keyboard_double_arrow_down
-            </span>
-          </div>
-        </div>
-        <br />
-        <div class="content-container">
-          <p>
-            4. To organize an annual accelerator program that trains and
-            mentors startups in entrepreneurship, helping them build
-            successful and sustainable businesses.
-          </p>
-          <div class="read-more-button">
-            <span class="material-symbols-outlined">
-              keyboard_double_arrow_down
-            </span>
-          </div>
-        </div>
-        <br />
-        <div class="content-container">
-          <p>
-            5. To create a strong mentorship network that connects startups
-            with experienced professionals, offering personalized guidance and
-            advice.
-          </p>
-          <div class="read-more-button">
-            <span class="material-symbols-outlined">
-              keyboard_double_arrow_down
-            </span>
-          </div>
-        </div>
-        <br />
-        <div class="content-container">
-          <p>
-            6. To encourage the development of innovative technologies, with a
-            specific focus on electric cars and other sustainable solutions.
-          </p>
-          <div class="read-more-button">
-            <span class="material-symbols-outlined">
-              keyboard_double_arrow_down
-            </span>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              We provide practical learning experiences and hands-on training
+              to students, enabling them to develop technical skills and
+              innovative problem-solving capabilities.
+            </div>
           </div>
         </div>
 
-        <div class="content-container">
-          <p>
-            7. To forge strategic partnerships with universities, industries,
-            other innovation hubs and governmental organizations to leverage
-            additional resources and expertise.
-          </p>
-          <div class="read-more-button">
-            <span class="material-symbols-outlined">
-              keyboard_double_arrow_down
-            </span>
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                aria-controls="collapseTwo">
+                Support university clubs
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              To support university clubs and facilitate cross-disciplinary
+              collaboration, fostering an environment that nurtures creativity
+              and entrepreneurial thinking.
+            </div>
           </div>
         </div>
 
-        <div class="content-container">
-          <p>
-            8. To evaluate and improve the effectiveness of our programs
-            continuously, ensuring their relevance and impact on the startup
-            ecosystem.
-          </p>
-          <div class="read-more-button">
-            <span class="material-symbols-outlined">
-              keyboard_double_arrow_down
-            </span>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
+                aria-controls="collapseThree">
+                Sponsor Student Projects
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              To sponsor student projects and provide a dedicated workspace
+              equipped with the tools and resources required for prototyping and
+              product development.
+            </div>
           </div>
         </div>
+
+
+
+        <div class="card">
+          <div class="card-header" id="headingFour">
+            <h5 class="mb-0">
+              <button data-toggle="collapse" data-target="#collapseFour" aria-expanded="true"
+                aria-controls="collapseFour">
+                Organize an annual accelerator program
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+            <div class="card-body">
+              To organize an annual accelerator program that trains and
+              mentors startups in entrepreneurship, helping them build
+              successful and sustainable businesses.
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="card">
+          <div class="card-header" id="headingFive">
+            <h5 class="mb-0">
+              <button data-toggle="collapse" data-target="#collapseFive" aria-expanded="true"
+                aria-controls="collapseFive">
+                Create Strong Mentorship Network
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div class="card-body">
+              To create a strong mentorship network that connects startups
+              with experienced professionals, offering personalized guidance and
+              advice.
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card">
+          <div class="card-header" id="headingSix">
+            <h5 class="mb-0">
+              <button data-toggle="collapse" data-target="#collapseSix" aria-expanded="true"
+                aria-controls="collapseSix">
+                Encourage The Development Of Innovative Technologies
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+            <div class="card-body">
+              To encourage the development of innovative technologies, with a
+              specific focus on electric cars and other sustainable solutions.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingSeven">
+            <h5 class="mb-0">
+              <button data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true"
+                aria-controls="collapseSeven">
+                Forge Strategic Partnerships
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+            <div class="card-body">
+              7. To forge strategic partnerships with universities, industries,
+              other innovation hubs and governmental organizations to leverage
+              additional resources and expertise.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <div class="card-header" id="headingEight">
+            <h5 class="mb-0">
+              <button data-toggle="collapse" data-target="#collapseEight" aria-expanded="true"
+                aria-controls="collapseEight">
+                Evaluate And Improve Effectiveness Of Our Programs
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+            <div class="card-body">
+              8. To evaluate and improve the effectiveness of our programs
+              continuously, ensuring their relevance and impact on the startup
+              ecosystem.
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </section>
+
     <section class="values">
-      <h1>Our Core Values</h1>
-      <div>
+      <h1><span class="blue">Core</span> Values</h1>
+      <div class="valuesContainer">
         <p>
           1. Innovation
           <br />
@@ -346,26 +439,75 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
           <br />
           8. Sustainability
         </p>
-      </div>
-      <div class="valueImages">
-        <img src="assets\electriccar2.jpg" alt="" />
+
+        <div class="valueImages">
+          <img src="assets\electriccar2.jpg" alt="" />
+        </div>
       </div>
       <br />
+
+
+      <br>
       <div class="whiteButton">
-        <a href="/CoreValues.html">Expolore Our Values</a>
+        <a href="Values.php">Expolore Our Values</a>
       </div>
     </section>
 
     <section class="about">
-      <h2>About</h2>
-      <h3>Arcus Innovation Hub</h3>
-      <p>
-        The Arcus Innovation Hub in Zambia is dedicated to fostering
-        innovation, entrepreneurship, and industrialization.
-      </p>
-      <div class="whiteButton moreAboutUs">
-        <a href="/About.html">More About Us</a>
+      <h1 style="z-index: 3; color: white; font-size: 56px;">
+        <span class="blue"> About</span> Arcus
+      </h1>
+      <div class="aboutBox">
+        <p class="blurBox">
+          The Arcus Innovation Hub in Zambia is dedicated to
+          fostering innovation, entrepreneurship, and
+          industrialization. We provide practical
+          learning opportunities, including PCB building and
+          partnership development through university clubs,
+          to support students and startups.
+        </p>
+        <p class="blurBox">
+          This program trains and mentors startups in
+          various aspects of entrepreneurship, culminating
+          in a pitching event where industry leaders
+          evaluate and provide feedback.
+        </p>
+        <p class="blurBox">
+          By emphasizing practical work, collaboration with university clubs, and providing resources and mentorship,
+          the Arcus Innovation Hub aims to create a vibrant ecosystem of innovation and empower students and startups to
+          drive technological advancements and sustainable solutions.
+        </p>
       </div>
+      <div class="whiteButton moreAboutUs">
+        <a href="About.php">More About Us</a>
+      </div>
+    </section>
+
+    <section class="partners">
+    <h1> <span class="blue">Partners &</span> Sponsers</h1>
+      <div class="partners-container">
+    <!-- Dummy partner items (you can add more as needed) -->
+    <div class="partner">
+      <img src="https://eizcbusc.com/img/CBU.png" alt="Partner 1">
+    
+    </div>
+    <div class="partner">
+      <img src="https://eizcbusc.com/img/icon.png" alt="Partner 2">
+     
+    </div>
+    <div class="partner">
+      <img src="https://eizcbusc.com/img/roboticscbu.jpg" alt="Partner 3">
+   
+    </div>
+    <div class="partner">
+      <img src="https://eizcbusc.com/img/roboticscbu.jpg" alt="Partner 3">
+      
+    </div>
+    <div class="partner">
+      <img src="https://eizcbusc.com/img/roboticscbu.jpg" alt="Partner 3">
+  
+    </div>
+  </div>
     </section>
     <section class="reach-us">
       <h2>Contact Us</h2>
@@ -388,6 +530,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
+      <br>
+
+      <h3 style="width:100%; text-align: center;">Contact Information</h3>
+      <br>
+      <div class="col-md-3">
+        <ul class="list-unstyled">
+          <li><i class="fa fa-map-marker-alt"></i> Arcus Innovation Hub, Kitwe Zambia.</li>
+          <li><i class="fa fa-phone"></i> +260960616121</li>
+          <li><i class="fa fa-envelope"></i> arcushub@gmail.com</li>
+        </ul>
+      </div>
       <div class="linksBand">
         <i class="fa fa-facebook"></i>
         <i class="fa fa-instagram"></i>
@@ -399,18 +552,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
 
       <br>
       <br>
+
       <br>
       <br>
       <br>
-      <br>
-      <br>
-      <h4>est. 2020</h4>
+      <p class="text-center">© ARCUS INNOVATION HUB. All rights reserved.</p>
+
     </section>
   </div>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- <script src="./js/bootstrap.js"></script> -->
+<script src="./js/jquery-3.4.1.min.js"></script>
 <script defer src="./js/jquery.js"></script>
 <script defer src="./js/main.js"></script>
 

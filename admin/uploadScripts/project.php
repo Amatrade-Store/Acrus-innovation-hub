@@ -3,7 +3,7 @@
 include_once($_SERVER['DOCUMENT_ROOT'] . '/Acrus-innovation-hub/db/config.php');
 
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image']) && isset($_POST['description']) && isset($_POST['title'])) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image']) && isset($_FILES['image2']) && isset($_FILES['image3']) && isset($_POST['description']) && isset($_POST['title'])) {
     $uploadDirectory = $_SERVER['DOCUMENT_ROOT'] . '/Acrus-innovation-hub/uploads/projects/'; // Absolute path to store uploaded images
    $uploadedFile = $uploadDirectory . basename($_FILES['image']['name']);
     $uploadOk = 1; // Flag to check if the upload was successful
@@ -41,12 +41,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image']) && isset($_P
             $projectDescription = $_POST['description'];
             $projectTitle = $_POST['title'];
             $projectImageUrl = '/Acrus-innovation-hub/uploads/projects/'  . basename($_FILES['image']['name']); // Replace with the actual path
+            $projectImageUrl2 = '/Acrus-innovation-hub/uploads/projects/'  . basename($_FILES['image2']['name']); // Replace with the actual path
+            $projectImageUrl3 = '/Acrus-innovation-hub/uploads/projects/'  . basename($_FILES['image3']['name']); // Replace with the actual path
    
             //save to db
 
-            $sql = "INSERT INTO projects (projectTitle, projectImage, projectDescription) VALUES (?, ?, ?)";
+            $sql = "INSERT INTO projects (projectTitle, projectImage, projectImage2, projectImage3, projectDescription) VALUES (?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param('sss', $projectTitle, $projectImageUrl, $projectDescription);
+            $stmt->bind_param('sssss', $projectTitle, $projectImageUrl, $projectImageUrl2,  $projectImageUrl3,$projectDescription);
 
             if ($stmt->execute()) {
                 // echo "Message Sent";

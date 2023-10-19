@@ -5,6 +5,8 @@
   transition: 0.3s cubic-bezier(0.9, 0, 0.8, 0.2);
   text-decoration: none;
   position: relative;
+  box-sizing: border-box;
+  
 }
 
 section p {
@@ -23,10 +25,17 @@ body {
   width: 100%;
   box-sizing: border-box;
   height: 400px;
+background-color: transparent;
 }
 
+
+
 section {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
   height: fit-content;
 
   padding: 10px;
@@ -36,12 +45,23 @@ section {
   background-position: center center;
   background-repeat: no-repeat;
   margin-bottom: 15px;
-  box-shadow: 0px 0px 7px 1px black;
+
   transition: 0.3s cubic-bezier(0.9, 0, 0.8, 0.2);
   overflow-x: hidden;
   overflow-y: auto;
   padding-bottom: 70px;
   z-index: 4;
+  
+}
+
+.parallax-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: translateZ(0);
 }
 
 section h2 {
@@ -52,7 +72,7 @@ section h2 {
   font-size: 3rem;
 }
 
-section h4 {
+h4 {
   color: #ffffff;
   padding: 7px;
 }
@@ -78,12 +98,27 @@ h2 span {
   width: fit-content;
 }
 
+ul li{
+  color:white;
+  margin: 5px;
+}
 .moreAboutUs {
   width: fit-content;
 }
 
 section.home {
   background-image: url("../assets/1.png");
+  z-index: 5;
+}
+.home h2 span{
+  font-size: 80px;
+  font-weight: 700;
+}
+.home h2.title{
+text-align: end;
+width: 100%;
+font-size: 70px;
+font-weight: 700;
 }
 
 section.mission {
@@ -101,10 +136,24 @@ section.values {
 section.about {
   background-image: url("../assets/5.png");
 }
+
+section.partners {
+  background-image: url("../assets/4.png");
+}
+
 section.reach-us {
   background-image: url("../assets/1.png");
   margin: 0;
 }
+.aboutBg{
+  background-image: url("../assets/1.png");
+}
+
+.valuesBg{
+  background-image: url("../assets/4.png");
+
+}
+
 
 .carousel-content .imageHolder img {
   width: 100%;
@@ -113,8 +162,8 @@ section.reach-us {
 }
 
 .carousel-content .imageHolder {
-  width: 60vw;
-  height: 300px;
+  width: 400px;
+  height: 400px;
 }
 
 p {
@@ -124,10 +173,11 @@ p {
 }
 
 .bodyContainer {
-  background-color: #525659;
-  padding: 10px;
+
+  padding: 0px;
   width: 100%;
   height: 100%;
+  background-color: #1d252d;
 }
 
 body a {
@@ -144,12 +194,18 @@ body a {
   gap: 20px;
   padding: 10px;
 }
-
-section.project img {
-  width: 300px; /* Make the image responsive to container width */
+.exploreHolder{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* section.project img {
+  width: 300px; 
   height: 300px;
   max-width: 390px;
-}
+  
+} */
 
 .project h2 {
   text-align: left;
@@ -169,11 +225,17 @@ section.project img {
   .project .secondSection {
     flex-direction: column-reverse;
   }
-  .project img {
-    width: auto; /* Make the image responsive to container width */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 600px; /* Limit maximum width */
-  }
+  /* .project img {
+    width: auto;
+     height: auto; 
+    max-width: 750px; 
+  } */
+}
+.firstSection h3{
+  color: wheat;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
 }
 .mission,
 .values {
@@ -188,16 +250,45 @@ section.project img {
   margin: 0;
   font-weight: 800;
 }
+
+.blurBox{
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  flex-direction: column;
+margin-bottom: 10px;
+  min-width:100%;
+  max-width: 1100px;
+   
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+    border-radius: 10px; /* Rounded corners for the card */
+    padding: 20px; /* Adjust padding as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    /* Add shine effect with linear gradient */
+    background: linear-gradient(15deg, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.2) 30%);
+    background-size: 300% 300%;
+    animation: shine 5s linear infinite;
+ 
+}
+
+
+
+
 .mission .missionImages,
 .values .valueImages {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  width: 5%;
+  width: 100%;
   height: 320px;
   position: relative;
+  padding: 8%;
+  max-width: 700px;
 }
+
+
 .mission img,
 .values img {
   width: 300px;
@@ -206,14 +297,28 @@ section.project img {
   position: absolute;
 }
 
-.missionImages :nth-child(1) {
-  left: 10px;
+.missionImages .blackCircle{
+  background-color: #201d1c;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+  
 }
 
+.missionImages :nth-child(1) {
+  left: 14%;
+}
 .missionImages :nth-child(2) {
-  right: 10px;
+  left: 32%;
+  z-index: 2;
+}
+.missionImages :nth-child(3) {
+  right: 12%;
+  z-index: 3;
 }
 .valueImages img {
+ 
 }
 
 section.mission h3 {
@@ -221,8 +326,9 @@ section.mission h3 {
   font-size: 25px;
   margin: 0%;
   padding: 0%;
+  max-width: 900px;
 }
-section.mission h2 {
+section.mission h2 {   
   color: #efdfc1;
   font-size: 50px;
   padding: 0%;
@@ -231,7 +337,7 @@ section.mission h2 {
 }
 
 .objectives h1,
-.values h1 {
+.values h1, .about h1,.partners h1 {
   font-size: 50px;
   font-weight: 900;
   color: #efdfc1;
@@ -357,12 +463,11 @@ body .btn-primary {
   backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
   background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px;
-  min-width: 90%;
-  min-height: 100px;
-  border-bottom-right-radius: 20% 50%;
-  border-top-right-radius: 20% 50%;
+  min-width: 100%;
+  min-height: 90px;
+
   position: absolute;
-  bottom: 90px;
+  bottom: 150px;
   left: 0px;
   color: white;
   display: flex;
@@ -374,9 +479,11 @@ body .btn-primary {
 
 .linksBand i{
   color: white;
-  font-size: 45px;
+  font-size:35px;
   transition: 0.3s ease;
 }
+
+
 
 .linksBand i:hover{
  color: #739ca2;
@@ -384,6 +491,12 @@ body .btn-primary {
 
 .reach-us{
   padding-bottom: 20px;
+  
+}
+.reach-us .contactForm{
+
+  width: 100%;
+  max-width: 700px;
 }
 
 .reach-us h4{
@@ -394,3 +507,162 @@ body .btn-primary {
   font-style: italic;
 
 }
+
+html body{
+  background-color: #ffffff;
+}
+
+#accordion .card{
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  flex-direction: column;
+margin-bottom: 10px;
+  
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+    border-radius: 10px; /* Rounded corners for the card */
+    padding: 20px; /* Adjust padding as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+
+    /* Add shine effect with linear gradient */
+    background: linear-gradient(15deg, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.2) 30%);
+    background-size: 300% 300%;
+    animation: shine 5s linear infinite;
+    max-width: 900px;
+    
+}
+
+@keyframes shine {
+  0% {
+      background-position: 0% 300%;
+  }
+  100% {
+      background-position: 300% 0%;
+      
+  }
+}
+
+h5 button{
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 10px;
+  color: #efdfc1;
+}
+div.card-body{
+  color: antiquewhite;
+  font-size: 20px;
+
+}
+
+span.blue{
+  color:#739ca2;
+  font-weight: 800;
+}
+
+.valuesContainer{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media  (max-width: 768px) {
+  .valuesContainer{
+      flex-direction: column;
+    }
+    .missionImages :nth-child(1) {
+      left: 4%;
+    }
+    .missionImages :nth-child(2) {
+      left: 14%;
+      z-index: 2;
+      /* background-color: red; */
+    }
+    .missionImages :nth-child(3) {
+      right: 0%;
+      z-index: 3;
+    }
+  }
+.about .aboutBox{
+
+}
+  .about p.blurBox{
+    width: 100%;
+    max-width: 1100px;
+   
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Create a 2-column grid */
+      gap: 20px; /* Add some spacing between the elements */
+    }
+    
+    .main-image {
+      grid-column: span 2; /* Span two columns for the main image */
+      text-align: center; /* Center the main image */
+    }
+    
+    .image-grid img {
+      max-width: 100%;
+      height: auto;
+      display: block; /* Remove extra space under inline images */
+    }
+    
+   .stacked-images {
+      display: flex;
+      flex-direction: row; 
+      justify-content: center; 
+      align-items: center; 
+      background-color: red;
+      min-width: 100%;
+    }
+    .partners-section {
+      background-color: #f5f5f5;
+      padding: 40px 0;
+      text-align: center;
+    }
+    
+    .partners-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: scroll 15s linear infinite;
+    }
+    
+    .partner {
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+    border-radius: 10px; /* Rounded corners for the card */
+    padding: 7px; /* Adjust padding as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+
+    /* Add shine effect with linear gradient */
+    height: fit-content;
+      text-align: center;
+      margin: 0 20px;
+      width: fit-content;
+      display: inline-block;
+    }
+    
+    .partner img {
+      max-width: 300px;
+      height: auto;
+      margin: 10px auto;
+    }
+    
+    /* Keyframes animation for infinite scrolling */
+    @keyframes scroll {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    

@@ -135,10 +135,11 @@ if ($conn->query($messageTableSQL) === TRUE) {
     <title>Arcus Adminstrator</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="../styles/lib.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="dashboard.php">Adminstrator</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -152,17 +153,18 @@ if ($conn->query($messageTableSQL) === TRUE) {
                 </li>
                 <li class="nav-item">
 
-                    <a href="./viewScripts/Help.php">Help</a>
+                    <a href="Help.php">Help</a>
                 </li>
                 <li class="nav-item">
                     About
                 </li>
                 <li class="nav-item">
-                    <a href="./authScript/logout.php" class="btn red">Logout</a> <!-- Add a logout button -->
+                    <a href="../authScripts/logout.php" class="btn red">Logout</a> <!-- Add a logout button -->
                 </li>
             </ul>
         </div>
     </nav>
+
     <?php if (!empty($success)): ?>
         <div style="color: green;">
             <?php echo $success; ?>

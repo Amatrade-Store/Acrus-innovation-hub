@@ -56,6 +56,8 @@ $projectsTableSQL = "CREATE TABLE IF NOT EXISTS projects (
     id INT AUTO_INCREMENT PRIMARY KEY,
     projectTitle VARCHAR(255) NOT NULL,
     projectImage TEXT NOT NULL,
+    projectImage2 TEXT NOT NULL,
+    projectImage3 TEXT NOT NULL,
     projectDescription TEXT NOT NULL
 )";
 

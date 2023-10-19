@@ -62,7 +62,10 @@ $result = mysqli_query($conn, $query);
                 <div>
                     <div class="white-container">
                         <p><strong>Project Title:</strong> <?php echo $row['projectTitle']; ?></p>
-                    <img class="item-image" src="<?php echo $row['projectImage']; ?>" alt="">
+                        <img class="item-image" src="<?php echo $row['projectImage']; ?>" alt="">
+                        <img class="item-image" src="<?php echo $row['projectImage2']; ?>" alt="">
+                        <img class="item-image" src="<?php echo $row['projectImage3']; ?>" alt="">
+                    
                         <p><strong>Project Description:</strong> <?php echo $row['projectDescription']; ?></p>
 
                         <form action="../deleteScripts/delete_project.php" method="post">

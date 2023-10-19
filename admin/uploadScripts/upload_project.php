@@ -36,6 +36,7 @@
             </ul>
         </div>
     </nav>
+    
     <section>
     <h3><a href="../dashboard.php">&leftarrow;</a>
         </h3>
@@ -45,7 +46,11 @@
 <input placeholder="project title" type="text" name="title" id="title" required>
   
     <input class="hide" type="file" name="image" id="image" accept="image/*" required>
-    <label class="whiteButton" for="image">upload image</label>
+    <label class="whiteButton" for="image">upload image (Main)</label>
+    <input class="hide" type="file" name="image2" id="image2" accept="image/*" required>
+    <label class="whiteButton" for="image2">upload image (left)</label>
+    <input class="hide" type="file" name="image3" id="image3" accept="image/*" required>
+    <label class="whiteButton" for="image3">upload image (right)</label>
     <textarea rows="20" cols="30" class="textInput" type="text" name="description" placeholder="enter description" required></textarea>
     <button class="upload-button" type="submit">Upload Project</button>
 </form>
