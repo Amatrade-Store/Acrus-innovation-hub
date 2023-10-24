@@ -35,14 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
 
 
 ?>
-<!-- <ul class="menu-list">
-          <div class="menu-list__item">Mission & Vision</div>
-          <div class="menu-list__item">Our Project</div>
-          <div class="menu-list__item">Objective</div>
-          <div class="menu-list__item">Core Value</div>
-          <div class="menu-list__item">About</div>
-          <div class="menu-list__item">Reach Us</div>
-        </ul> -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,77 +46,99 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Arcus Innovation</title>
   <link rel="stylesheet" href="./styles/styles.css" />
+  <!-- <link rel="stylesheet" href="./styles/style.css" /> -->
   <link rel="stylesheet" href="./styles/lib.css" />
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet"/> -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
- 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Customized Bootstrap Stylesheet -->
+   
 </head>
 
 <body>
   <div class="bodyContainer">
-    <br>
-<nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="">logo</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <!-- Add links to gallery, events, and contact sections -->
-                <li class="nav-item">
-                    <a href="../Home.php"> Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Help.php">Mission & Vision</a>
-                </li>
-                <li class="nav-item">
-                <a href="">Projects</a>
-                </li>
-                <li class="nav-item">
-<a href="">                    Objectives</a>                </li>
-                <li class="nav-item">
-                    <a href="">Values</a>
-                </li>
-                <li class="nav-item">
-                    <a href="">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="">Partners & Sponsors</a>
-                </li> 
-                <li class="nav-item">
-                    <a href="">Contact Us</a>
-                </li>
 
-            </ul>
+  <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <div>
+          <img style="width: 100px; height: auto;" src="assets/Arcuslogo.png" alt="image">
         </div>
-    </nav>
-    <!-- start section -->
 
-    </section>
-    <section class="home">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""> </span>
+        </button>
 
-
-      <h2 class="title">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  ">
+            
+              <li class="nav-item active wow fadeInUp">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active wow fadeInUp" data-wow-delay="0.3s">
+                <a class="nav-link" href="#mission&vision">Mission & Vision <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active wow fadeInUp" data-wow-delay="0.4s">
+                <a class="nav-link" href="#projects">Our Projects<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active wow fadeInUp" data-wow-delay="0.5s">
+                <a class="nav-link" href="#objectives">Objectives<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active wow fadeInUp" data-wow-delay="0.6s">
+                <a class="nav-link" href="#values">Our Values<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active wow fadeInUp" data-wow-delay="0.7s">
+                <a class="nav-link" href="#sales">Sales<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active wow fadeInUp" data-wow-delay="0.8s">
+                <a class="nav-link" href="#team">Our Tean<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active wow fadeInUp" data-wow-delay="0.9s"> 
+                <a class="nav-link" href="#partners">Partnerships<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active wow fadeInUp" data-wow-delay="1s">
+                <a class="nav-link" href="#about">About<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active wow fadeInUp" data-wow-delay="1.1s">
+                <a class="nav-link" href="#reachus">Reach Us<span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+  <section class="home">
+   
+      <h2 class="title wow fadeInUp">
         <span>Arcus</span><br />
         Innovation Hub
       </h2>
       <br />
-      <h4>
+      <h4 class="wow fadeInUp">
         Where innovation meets opportunity. Discover what's next with us!
         The hub offers sponsorship for student projects, a dedicated workspace with internet access, and
         organizes an annual accelerator program.
       </h4>
 
-      <div class="exploreHolder">
+      <div class="exploreHolder wow fadeInUp">
         <div class="whiteButton">Explore</div>
-
       </div>
+
       <div class="homeMain">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
           <div class="carousel-inner">
@@ -167,8 +182,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
         </div>
       </div>
     </section>
+
     <!-- mission secttion -->
-    <section class="mission">
+    <section class="mission" id="mission&vision">
       <br />
       <br />
       <h2>Mission & Vision</h2>
@@ -176,7 +192,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
       <br />
       <h3>Our Mission:</h3>
       <br>
-      <p class="blurBox">
+      <p class="wow fadeInUp">
         The mission of the Arcus Innovation Hub is to foster a culture of
         innovation, entrepreneurship, and industrialization in Zambia.
         <br />
@@ -187,7 +203,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
         prosperity.
       </p>
 
-      <div class="missionImages">
+      <div class="missionImages wow fadeInUp">
         <img src="assets\solarsystem.jpg" alt="" />
         <div class="blackCircle"></div>
         <img src="assets\electriccar2.jpg" alt="" />
@@ -195,8 +211,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
       <h3>Vision:</h3>
       <br>
 
-      <div class="">
-        <p class="blurBox">
+
+      <p class="wow fadeInUp">
           Our vision is to become a leading innovation hub in Zambia,
           recognized for driving technological advancements, nurturing
           entrepreneurial talent, and supporting startups in developing
@@ -207,14 +223,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
           marketable products, contributing to Zambia's industrialization,
           economic growth, and global competitiveness.
         </p>
-
-      </div>
     </section>
-    <section class="project">
 
+    <section class="project" id="projects">
       <h2> <span class="blue">Our</span> Projects</h2>
-
-
       <?php
       if ($projects->num_rows >= 1) {
         // Initialize a flag to track the first item
@@ -225,17 +237,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
               <h3>
                 <?php echo $row['projectTitle']; ?>
               </h3>
+              
               <div class="image-grid">
-                <div class="main-image">
+                <div class="main-image wow fadeInUp">
                   <img src="<?php echo $row['projectImage']; ?>" alt="Main Image" />
                 </div>
-                <img src="<?php echo $row['projectImage2']; ?>" alt="Image 2" />
-                  <img src="<?php echo $row['projectImage3']; ?>" alt="Image 3" />
-                
+                <img class="wow fadeInUp" data-wow-delay="0.4s" src="<?php echo $row['projectImage2']; ?>" alt="Image 2" />
+                <img class="wow fadeInUp" data-wow-delay="0.7s" src="<?php echo $row['projectImage3']; ?>" alt="Image 3" />
+
               </div>
               <br>
               <div class="">
-                <p class="blurBox">
+                <p class="wow fadeInUp">
                   <?php echo $row['projectDescription']; ?>
                 </p>
               </div>
@@ -254,9 +267,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
     </section>
 
     <!-- objectives section -->
-    <section class="objectives">
+    <section class="objectives" id="objectives">
       <h1>Our <span class="blue">Objectives</span></h1>
-      <div id="accordion">
+      <div id="accordion" >
 
         <div class="card">
           <div class="card-header" id="headingOne">
@@ -421,44 +434,245 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
       </div>
     </section>
 
-    <section class="values">
+    <section class="values" id="values">
       <h1><span class="blue">Core</span> Values</h1>
       <div class="valuesContainer">
         <p>
-          1. Innovation
+          <span class="wow fadeInUp" data-wow-delay="0.2s">1. Innovation</span>
           <br />
-          2. Collaboration
+          <span class="wow fadeInUp" data-wow-delay="0.4s">2. Collaboration</span>
           <br />
-          3. Impact
+          <span class="wow fadeInUp" data-wow-delay="0.6s">3. Impact</span>
           <br />
-          4. Excellence
+          <span class="wow fadeInUp" data-wow-delay="0.8s">4. Excellence</span>
           <br />
-          5. Inclusivity 6. Growth Mindset
+          <span class="wow fadeInUp" data-wow-delay="1s">5. Inclusivity 6. Growth Mindset</span>
           <br />
-          7. Empowerment
+          <span class="wow fadeInUp" data-wow-delay="1.2s">7. Empowerment</span>
           <br />
-          8. Sustainability
+          <span class="wow fadeInUp" data-wow-delay="1.4s">8. Sustainability</span>
         </p>
 
-        <div class="valueImages">
-          <img src="assets\electriccar2.jpg" alt="" />
+        <div class="valueImages wow fadeInUp" data-wow-delay="1s">
+          <img src="assets\students (2).jpg" alt="" />
         </div>
       </div>
       <br />
 
 
       <br>
-      <div class="whiteButton">
-        <a href="Values.php">Expolore Our Values</a>
+      <div class="whiteButton wow fadeInUp">
+        <a href="Values.php">More Insigt On Our Values</a>
       </div>
     </section>
+ 
 
-    <section class="about">
-      <h1 style="z-index: 3; color: white; font-size: 56px;">
+      <section class="salesSection" id="sales">
+        
+        <!-- Menu Start -->
+      
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                   <h1 class="mb-5">Most Popular Items</h1>
+                </div>
+                <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <!-- <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+
+
+                    </ul> -->
+
+                    <div class="tab-contentr" style="display: flex; align-items: center; flex-direction: column;">
+                    <li class="whiteButton">
+                          <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+                            <i class="fa fa-bolt fa-2x  text-primary"></i>
+                            <div class="ps-3">
+                              <small class="text-body">Electric Vehicles</small>
+                              <h6 class="mt-n1 mb-0">Booking and Buying</h6>
+                            </div>
+                          </a>
+                        </li>
+                   
+                        <br>
+                        <div id="tab-1" class="tab-pane show active fade p-0">
+                          
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="assets\electriccar2.jpg" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Tunta Electric car</span>
+                                                <span class="text-primary">K70,000</span>
+                                            </h5>
+                                            <small class="fst-italic">Our basic models start at K70,000 but prices increase depending on more requirements</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+
+                            </div>
+                        </div>
+
+                        <li class="whiteButton">
+                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+                                <i class="fa fa-laptop fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Arcus Devices</small>
+                                    <h6 class="mt-n1 mb-0">Custom devices</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <br>
+                        <div id="tab-2" class="tab-pane active fade show p-0">
+                        <br>
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="assets/fabrications (2).jpg" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Wine Bottle Cover</span>
+                                                <span class="text-primary">K200</span>
+                                            </h5>
+                                            <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="assets/key holders.jpg" alt="" style="width: 100px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Key holders</span>
+                                                <span class="text-primary">K200</span>
+                                            </h5>
+                                            <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="assets/love box.jpg" alt="" style="width: 100px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Love box</span>
+                                                <span class="text-primary">K200</span>
+                                            </h5>
+                                            <small class="fst-italic">Nicely designed love Box for that special someone</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="assets/desks.jpg" alt="" style="width: 100px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>School desks</span>
+                                                <span class="text-primary">K2000</span>
+                                            </h5>
+                                            <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="assets/brai stands (1).jpg" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Braii Stands</span>
+                                                <span class="text-primary">K800</span>
+                                            </h5>
+                                            <small class="fst-italic">Brai stand for homes and other places </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="assets/fabrications (2).jpg" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Lazer Cutting</span>
+                                                <span class="text-primary">K1000</span>
+                                            </h5>
+                                            <small class="fst-italic">We do custom lazer cutting </small>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            
+                            </div>
+                        </div>
+                        <!-- PCB SECTION  -->
+                        
+                        <li class="whiteButton">
+                          <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
+                            <i class="fa fa-microchip fa-2x text-primary"></i>
+                            <div class="ps-3">
+                              <small class="text-body">PCBs</small>
+                              <h6 class="mt-n1 mb-0">Custom made</h6>
+                            </div>
+                          </a>
+                        </li>   
+                        <br>
+                        <div id="tab-3" class="tab-pane fade active show p-0">
+                        <div class="row g-4">
+                             
+                        <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="assets/pcb5.jpg" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Custom PCB designing </span>
+                                                <span class="text-primary">K500</span>
+                                            </h5>
+                                            <small class="fst-italic">K500 is the starting point and the price increases with more features</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="assets/pcbs.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Generic PCB Designs</span>
+                                                <span class="text-primary">starting at K500</span>
+                                            </h5>
+                                            <small class="fst-italic">Any PCB designs for companies and individuals.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="assets/pcb3.jpg" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Variety PCB Designs</span>
+                                                <span class="text-primary">starting at K500</span>
+                                            </h5>
+                                            <small class="fst-italic">We build PCB designs for companies and individuals.</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <!-- Menu End -->
+      </section>
+
+<br>
+    <section class="about" id="about">
+      <h1 class="wow fadeInUp" style="z-index: 3; color: white; font-size: 56px;">
         <span class="blue"> About</span> Arcus
       </h1>
       <div class="aboutBox">
-        <p class="blurBox">
+        <p class="blurBox2 wow fadeInUp">
           The Arcus Innovation Hub in Zambia is dedicated to
           fostering innovation, entrepreneurship, and
           industrialization. We provide practical
@@ -466,50 +680,62 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
           partnership development through university clubs,
           to support students and startups.
         </p>
-        <p class="blurBox">
+        <p class="blurBox2 wow fadeInUp">
           This program trains and mentors startups in
           various aspects of entrepreneurship, culminating
           in a pitching event where industry leaders
           evaluate and provide feedback.
         </p>
-        <p class="blurBox">
+        <p class="blurBox2 wow fadeInUp">
           By emphasizing practical work, collaboration with university clubs, and providing resources and mentorship,
           the Arcus Innovation Hub aims to create a vibrant ecosystem of innovation and empower students and startups to
           drive technological advancements and sustainable solutions.
         </p>
       </div>
-      <div class="whiteButton moreAboutUs">
+      <div class="whiteButton moreAboutUs  wow fadeInUp">
         <a href="About.php">More About Us</a>
       </div>
     </section>
-
-    <section class="partners">
-    <h1> <span class="blue">Partners &</span> Sponsers</h1>
-      <div class="partners-container">
-    <!-- Dummy partner items (you can add more as needed) -->
-    <div class="partner">
-      <img src="https://eizcbusc.com/img/CBU.png" alt="Partner 1">
+    <section class="team">
+      <h1>Our <span class="blue">Team</span></h1>
+      <div class="team-container">
+        <!-- Dummy partner items (you can add more as needed) -->
+        <div class="teamMember">
+          <h2>Chishimba Katepa</h2>
+          <img class=" img-fluid" src="assets/teamMembers/chishimba.jpeg" alt="">
+<h3><span class="blue">Engineer</span></h3>
+        </div>
     
-    </div>
-    <div class="partner">
-      <img src="https://eizcbusc.com/img/icon.png" alt="Partner 2">
-     
-    </div>
-    <div class="partner">
-      <img src="https://eizcbusc.com/img/roboticscbu.jpg" alt="Partner 3">
-   
-    </div>
-    <div class="partner">
-      <img src="https://eizcbusc.com/img/roboticscbu.jpg" alt="Partner 3">
-      
-    </div>
-    <div class="partner">
-      <img src="https://eizcbusc.com/img/roboticscbu.jpg" alt="Partner 3">
-  
-    </div>
-  </div>
+      </div>
     </section>
-    <section class="reach-us">
+    <section class="partners" id="partners">
+      <h1> <span class="blue">Partners &</span> Sponsers</h1>
+      <div class="partners-container">
+        <!-- Dummy partner items (you can add more as needed) -->
+        <div class="partner">
+          <img src="https://eizcbusc.com/img/CBU.png" alt="Partner 1">
+
+        </div>
+        <div class="partner">
+          <img src="https://eizcbusc.com/img/icon.png" alt="Partner 2">
+
+        </div>
+        <div class="partner">
+          <img src="https://eizcbusc.com/img/roboticscbu.jpg" alt="Partner 3">
+
+        </div>
+        <div class="partner">
+          <img src="https://eizcbusc.com/img/roboticscbu.jpg" alt="Partner 3">
+
+        </div>
+        <div class="partner">
+          <img src="https://eizcbusc.com/img/roboticscbu.jpg" alt="Partner 3">
+
+        </div>
+      </div>
+    </section>
+
+    <section class="reach-us" id="reachus">
       <h2>Contact Us</h2>
 
       <div class="contactForm">
@@ -542,11 +768,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
         </ul>
       </div>
       <div class="linksBand">
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-instagram"></i>
-        <i class="fa fa-telegram"></i>
-        <i class="fa fa-whatsapp"></i>
-      </div>
+     
+     <i class="bi bi-facebook"></i>
+     <i class="bi bi-instagram"></i>
+     <i class="bi bi-telegram"></i>
+     <i class="bi bi-whatsapp"></i>
+     
+   </div>
       <br>
       <br>
 
@@ -562,11 +790,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['names']) && isset($_PO
   </div>
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- <script src="./js/bootstrap.js"></script> -->
-<script src="./js/jquery-3.4.1.min.js"></script>
-<script defer src="./js/jquery.js"></script>
-<script defer src="./js/main.js"></script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/main.js"></script>
 
 </html>

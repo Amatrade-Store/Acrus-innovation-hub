@@ -28,8 +28,9 @@ body {
 background-color: transparent;
 }
 
-
-
+nav.navbar {
+  padding: 15px;
+}
 section {
   display: flex;
   flex-direction: column;
@@ -107,7 +108,8 @@ ul li{
 }
 
 section.home {
-  background-image: url("../assets/1.png");
+  /* background-image: url("../assets/1.png"); */
+  background-color: black;
   z-index: 5;
 }
 .home h2 span{
@@ -122,31 +124,43 @@ font-weight: 700;
 }
 
 section.mission {
-  background-image: url("../assets/6.png");
+  /* background-image: url("../assets/6.png");
+  
+  */
+  background-color: black;
 }
 section.project {
-  background-image: url("../assets/5.png");
+  /* background-image: url("../assets/5.png"); */
+  background-color: black;
 }
 section.objectives {
-  background-image: url("../assets/4.png");
+  /* background-image: url("../assets/4.png"); */
+  background-color: black;
 }
 section.values {
-  background-image: url("../assets/4.png");
+  /* background-image: url("../assets/4.png"); */
+  background-color: black;
 }
 section.about {
-  background-image: url("../assets/5.png");
+  /* background-image: url("../assets/5.png"); */
+  background-color: black;
 }
 
-section.partners {
-  background-image: url("../assets/4.png");
+section.partners, section.team {
+  /* background-image: url("../assets/4.png"); */
+  background-color: black;
 }
 
-section.reach-us {
-  background-image: url("../assets/1.png");
+section.reach-us, section.salesSection {
+  /* background-image: url("../assets/1.png"); */
+  background-color: black;
   margin: 0;
 }
+
+
 .aboutBg{
-  background-image: url("../assets/1.png");
+  /* background-image: url("../assets/1.png"); */
+  background-color: black;
 }
 
 .valuesBg{
@@ -272,7 +286,21 @@ margin-bottom: 10px;
  
 }
 
+.blurBox2{
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  flex-direction: column;
+margin-bottom: 10px;
+  min-width:100%;
+  max-width: 1100px;
+   
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+    border-radius: 10px; /* Rounded corners for the card */
+    padding: 20px; /* Adjust padding as needed */
 
+}
 
 
 .mission .missionImages,
@@ -297,8 +325,21 @@ margin-bottom: 10px;
   position: absolute;
 }
 
+.newSection div{
+  height: fit-content;
+}
+.newSection img{
+  width: 300px;
+  height: auto;
+  min-width: 300px;
+  min-height: auto;
+  max-width: 300px;
+  max-height: auto;
+  margin: 10px;
+}
+
 .missionImages .blackCircle{
-  background-color: #201d1c;
+  background-color: #000000;
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -337,7 +378,7 @@ section.mission h2 {
 }
 
 .objectives h1,
-.values h1, .about h1,.partners h1 {
+.values h1, .about h1,.partners h1, .team h1 {
   font-size: 50px;
   font-weight: 900;
   color: #efdfc1;
@@ -461,7 +502,7 @@ body .btn-primary {
 
 .linksBand{
   backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(14, 63, 93, 0.5);
   box-shadow: 0px 0px;
   min-width: 100%;
   min-height: 90px;
@@ -481,6 +522,8 @@ body .btn-primary {
   color: white;
   font-size:35px;
   transition: 0.3s ease;
+  z-index: 4;
+
 }
 
 
@@ -625,16 +668,18 @@ span.blue{
       text-align: center;
     }
     
-    .partners-container {
+    .partners-container, .team-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
       overflow: hidden;
       white-space: nowrap;
-      animation: scroll 15s linear infinite;
+      animation: scroll 20s linear infinite;
     }
-    
-    .partner {
+    .team-container{
+      animation: scrollLeft 20s linear infinite;
+    }
+    .partner, .teamMember {
       border-radius: 5px;
       background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
     backdrop-filter: blur(10px); /* Apply a blur effect to the background */
@@ -650,7 +695,7 @@ span.blue{
       display: inline-block;
     }
     
-    .partner img {
+    .partner img, .teamMember img{
       max-width: 300px;
       height: auto;
       margin: 10px auto;
@@ -665,4 +710,188 @@ span.blue{
         transform: translateX(-100%);
       }
     }
+    @keyframes scrollLeft {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    /* loader */
+
     
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 45px;
+  bottom: 45px;
+  z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease-out, visibility 0s linear .5s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity .5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/*** Youtube Video ***/
+.video {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+  background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1)), url(../img/RCC_CBU.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.video .btn-play {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-sizing: content-box;
+  display: block;
+  width: 32px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  padding: 18px 20px 18px 28px;
+}
+
+.video .btn-play:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: var(--primary);
+  border-radius: 50%;
+  animation: pulse-border 1500ms ease-out infinite;
+}
+
+.video .btn-play:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: var(--primary);
+  border-radius: 50%;
+  transition: all 200ms;
+}
+
+.video .btn-play img {
+  position: relative;
+  z-index: 3;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.video .btn-play span {
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  border-left: 32px solid var(--dark);
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+}
+
+
+/* items for sale css */
+
+/* Container styles */
+.salesSection .container {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 20px;
+}
+
+/* Title styles */
+.section-title {
+  font-size: 24px;
+}
+
+.salesSection h1 {
+  font-size: 36px;
+  margin: 20px 0;
+}
+
+/* Tab styles */
+.nav-pills .nav-item {
+  margin: 0 10px;
+}
+
+.nav-pills .nav-item a {
+  color: #fff;
+  border: 2px solid #fff; /* White border */
+  border-radius: 10px; /* Border radius */
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.nav-pills .nav-item a:hover {
+  background-color: #fff; /* White background on hover */
+  color: #000; /* Black text on hover */
+}
+
+.tab-pane {
+  background-color: #000; /* Black background for tab content */
+  padding: 20px;
+}
+
+/* Card styles */
+.col-lg-6 {
+  margin-bottom: 20px;
+}
+
+.flex-shrink-0 {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #fff; /* White border for images */
+  border-radius: 50%; /* Circular images */
+}
+
+/* Price and description styles */
+.h5 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.text-primary {
+  color: #fff;
+}
+
+.fst-italic {
+  font-style: italic;
+}

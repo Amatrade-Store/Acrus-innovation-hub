@@ -6,6 +6,9 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/Acrus-innovation-hub/db/config.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image']) && isset($_FILES['image2']) && isset($_FILES['image3']) && isset($_POST['description']) && isset($_POST['title'])) {
     $uploadDirectory = $_SERVER['DOCUMENT_ROOT'] . '/Acrus-innovation-hub/uploads/projects/'; // Absolute path to store uploaded images
    $uploadedFile = $uploadDirectory . basename($_FILES['image']['name']);
+   $uploadedFile2 = $uploadDirectory . basename($_FILES['image2']['name']);
+   $uploadedFile3 = $uploadDirectory . basename($_FILES['image3']['name']);
+  
     $uploadOk = 1; // Flag to check if the upload was successful
 
     // Check if the image file is a real image or a fake image
@@ -35,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image']) && isset($_F
     }
 
     if ($uploadOk) {
-        if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadedFile)) {
+        if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadedFile) && move_uploaded_file($_FILES['image2']['tmp_name'], $uploadedFile2)&&move_uploaded_file($_FILES['image3']['tmp_name'], $uploadedFile3)) {
             // File uploaded successfullyc
 
             $projectDescription = $_POST['description'];
