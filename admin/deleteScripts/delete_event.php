@@ -14,6 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         if ($conn->query($delete_query) === TRUE) {
             // Deletion was successful
+            unlink($_SERVER['DOCUMENT_ROOT'] . $row['eventImage']);
+
             echo "Deleted";
             header("Location: ../viewScripts/events.php"); // Redirect to your messages page
             exit();
