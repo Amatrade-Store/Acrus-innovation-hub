@@ -9,12 +9,7 @@
 html{
   overflow: hidden;
 }
-nav {
-  position: fixed;
-  top: 2px;
-  width: 95%;
 
-}
 .navbar .navbar-brand{
 color: white;
 font-weight: 600;
@@ -61,7 +56,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+background-color: #000000;
     overflow: hidden;
   padding: 0px;
   margin: 0;
@@ -71,34 +66,8 @@ body {
   background-repeat: no-repeat;
   box-sizing: border-box;
   height: 100vh;
-  background-image: url("../assets/1.png");
 }
 
-.screen {
-  background-color: #012124ea;
-  position: fixed;
-  width: 95%;
-  height: 95%;
-  max-height: 100vh;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 25;
-  display: flex;
-  transform: translateX(-110%);
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-  transition: 250ms ease-in;
-  padding: 10px;
-  box-shadow: 0px 0px 10px 1px;
-
-}
 
 .overLay {
   position: fixed;
@@ -114,9 +83,6 @@ body {
   opacity: 1;
 }
 
-.screen.active {
-  transform: translateX(0%);
-}
 
 .optionsContainer{
   
@@ -140,21 +106,23 @@ color: rgb(255, 255, 255);
   top: 8px;
   right: 20px;
 }
-
-.optionsContainer span{
-  padding:7px;
-   min-width: 80px;
-   max-height: 40px;
-   max-width: fit-content;
+div.optionsContainer{
   width: fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 20px;
+}
+.optionsContainer span{
+
   border: 2px solid white;
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 17px;
+  border-radius: 4px;
   font-size: auto;
   text-align: center;
+  padding: 5px;
 }
 
 .screen h2, section h2{
@@ -173,10 +141,8 @@ max-height: 40%;
 
 
 }
-.screen .uploadSection{
 
-}
-.screen .scrollable, section .scrollable{
+ .scrollable, section .scrollable{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,6 +154,7 @@ max-height: 40%;
   width: 95%;
 
   padding: 3px;
+  padding-bottom: 200px;
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -222,7 +189,7 @@ max-height: 40%;
   padding: 5px;
 }
 button.upload-button{
-  background-color: rgb(235, 153, 38);
+  background-color: rgb(49, 138, 152);
   padding: 8px;
   margin: 10px;
   border-radius: 10px;
@@ -334,26 +301,401 @@ h3 i{
   font-size: 20px;
 }
 
-.floatingButton{
-  position: absolute;
-  margin: auto;
-  opacity: 0;
-  transform: translate(0px);
-  transition: 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
-}
 
-.floatingButton.up{
-  transform: translateY(-70px);
-  opacity: 1;
-}
-
-.floatingButton.down{
-  transform: translateY(30px);
-  opacity: 1;
-}
-.controlButton{
-  z-index: 3;
-}
 body a{
   color: white;
+}
+
+
+/********** Template CSS **********/
+:root {
+  --primary: #ff0000;
+  --secondary: #191C24;
+  --light: #6C7293;
+  --dark: #000000;
+}
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 45px;
+  bottom: 45px;
+  z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease-out, visibility 0s linear .5s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity .5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+  transition: .5s;
+}
+
+.btn-square {
+  width: 38px;
+  height: 38px;
+}
+
+.btn-sm-square {
+  width: 32px;
+  height: 32px;
+}
+
+.btn-lg-square {
+  width: 48px;
+  height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  border-radius: 50px;
+}
+
+
+/*** Layout ***/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  height: 100vh;
+  overflow-y: auto;
+  background: var(--secondary);
+  transition: 0.5s;
+  z-index: 999;
+}
+
+.content {
+  margin-left: 250px;
+  min-height: 100vh;
+  background: var(--dark);
+  transition: 0.5s;
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+      margin-left: 0;
+  }
+
+  .sidebar.open {
+      margin-left: -250px;
+  }
+
+  .content {
+      width: calc(100% - 250px);
+  }
+
+  .content.open {
+      width: 100%;
+      margin-left: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+      margin-left: -250px;
+  }
+
+  .sidebar.open {
+      margin-left: 0;
+  }
+
+  .content {
+      width: 100%;
+      margin-left: 0;
+  }
+}
+
+
+/*** Navbar ***/
+.sidebar .navbar .navbar-nav .nav-link {
+  padding: 7px 20px;
+  color: var(--light);
+  font-weight: 500;
+  border-left: 3px solid var(--secondary);
+  border-radius: 0 30px 30px 0;
+  outline: none;
+}
+
+.sidebar .navbar .navbar-nav .nav-link:hover,
+.sidebar .navbar .navbar-nav .nav-link.active {
+  color: var(--primary);
+  background: var(--dark);
+  border-color: var(--primary);
+}
+
+.sidebar .navbar .navbar-nav .nav-link i {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark);
+  border-radius: 40px;
+}
+
+.sidebar .navbar .navbar-nav .nav-link:hover i,
+.sidebar .navbar .navbar-nav .nav-link.active i {
+  background: var(--secondary);
+}
+
+.sidebar .navbar .dropdown-toggle::after {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transition: .5s;
+}
+
+.sidebar .navbar .dropdown-toggle[aria-expanded=true]::after {
+  transform: rotate(-180deg);
+}
+
+.sidebar .navbar .dropdown-item {
+  padding-left: 25px;
+  border-radius: 0 30px 30px 0;
+  color: var(--light);
+}
+
+.sidebar .navbar .dropdown-item:hover,
+.sidebar .navbar .dropdown-item.active {
+  background: var(--dark);
+}
+
+.content .navbar .navbar-nav .nav-link {
+  margin-left: 25px;
+  padding: 12px 0;
+  color: var(--light);
+  outline: none;
+}
+
+.content .navbar .navbar-nav .nav-link:hover,
+.content .navbar .navbar-nav .nav-link.active {
+  color: var(--primary);
+}
+
+.content .navbar .sidebar-toggler,
+.content .navbar .navbar-nav .nav-link i {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark);
+  border-radius: 40px;
+}
+
+.content .navbar .dropdown-item {
+  color: var(--light);
+}
+
+.content .navbar .dropdown-item:hover,
+.content .navbar .dropdown-item.active {
+  background: var(--dark);
+}
+
+.content .navbar .dropdown-toggle::after {
+  margin-left: 6px;
+  vertical-align: middle;
+  border: none;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transition: .5s;
+}
+
+.content .navbar .dropdown-toggle[aria-expanded=true]::after {
+  transform: rotate(-180deg);
+}
+
+@media (max-width: 575.98px) {
+  .content .navbar .navbar-nav .nav-link {
+      margin-left: 15px;
+  }
+}
+
+
+/*** Date Picker ***/
+.bootstrap-datetimepicker-widget.bottom {
+  top: auto !important;
+}
+
+.bootstrap-datetimepicker-widget .table * {
+  border-bottom-width: 0px;
+}
+
+.bootstrap-datetimepicker-widget .table th {
+  font-weight: 500;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+  background: var(--primary);
+}
+
+.bootstrap-datetimepicker-widget table td.today::before {
+  border-bottom-color: var(--primary);
+}
+
+
+/*** Testimonial ***/
+.progress .progress-bar {
+  width: 0px;
+  transition: 2s;
+}
+
+
+/*** Testimonial ***/
+.testimonial-carousel .owl-dots {
+  margin-top: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  width: 15px;
+  height: 15px;
+  border: 5px solid var(--primary);
+  border-radius: 15px;
+  transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+  background: var(--dark);
+  border-color: var(--primary);
+}
+
+
+.logo{
+  width: 100px;
+ 
+}
+.logo img{
+width: 80px;
+height: auto;
+}
+
+p span{
+  color: var(--primary);
+  font-size: larger;
+  font-weight:800;
+  margin-left: 10px;
+}
+
+h5 img{
+  width: 40px;
+  height: 40px;
+  background: none;
+
+ 
+}
+.logo img{
+  width: 100px;
+}
+
+.modal-header{
+  background: var(--primary);
+}
+.modalTime{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.modalTime span{
+  color: black;
+}
+
+.contentItem{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.detailsItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contentItem :last-child{
+  color: black;
+  font-weight: bold;
+}
+
+.modal-footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-footer :first-child{
+  background-color: rgb(41, 86, 208);
+}
+.modal-footer :first-child a{
+color: #ffff;
+}
+
+.messageItem h2, .messageItem span i, .NotificationItem h2{
+  color: #000000;
+}
+
+.mb-0 i{
+font-weight: lighter;
+}
+
+.close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.popModal-content{
+  padding-top: 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+}
+
+.notificationItem .notificationContent :hover{
+ color: var(--primary);
+ cursor: pointer;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
 }

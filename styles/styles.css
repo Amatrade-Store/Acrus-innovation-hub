@@ -6,7 +6,6 @@
   text-decoration: none;
   position: relative;
   box-sizing: border-box;
-  
 }
 
 section p {
@@ -25,7 +24,7 @@ body {
   width: 100%;
   box-sizing: border-box;
   height: 400px;
-background-color: transparent;
+  background-color: transparent;
 }
 
 nav.navbar {
@@ -52,7 +51,6 @@ section {
   overflow-y: auto;
   padding-bottom: 70px;
   z-index: 4;
-  
 }
 
 .parallax-image {
@@ -99,8 +97,8 @@ h2 span {
   width: fit-content;
 }
 
-ul li{
-  color:white;
+ul li {
+  color: white;
   margin: 5px;
 }
 .moreAboutUs {
@@ -112,15 +110,15 @@ section.home {
   background-color: black;
   z-index: 5;
 }
-.home h2 span{
+.home h2 span {
   font-size: 80px;
   font-weight: 700;
 }
-.home h2.title{
-text-align: end;
-width: 100%;
-font-size: 70px;
-font-weight: 700;
+.home h2.title {
+  text-align: end;
+  width: 100%;
+  font-size: 70px;
+  font-weight: 700;
 }
 
 section.mission {
@@ -146,28 +144,27 @@ section.about {
   background-color: black;
 }
 
-section.partners, section.team {
+section.partners,
+section.team {
   /* background-image: url("../assets/4.png"); */
   background-color: black;
 }
 
-section.reach-us, section.salesSection {
+section.reach-us,
+section.salesSection {
   /* background-image: url("../assets/1.png"); */
   background-color: black;
   margin: 0;
 }
 
-
-.aboutBg{
+.aboutBg {
   /* background-image: url("../assets/1.png"); */
   background-color: black;
 }
 
-.valuesBg{
-  background-image: url("../assets/4.png");
-
+.valuesBg {
+  background-color: #1d252d;
 }
-
 
 .carousel-content .imageHolder img {
   width: 100%;
@@ -187,7 +184,6 @@ p {
 }
 
 .bodyContainer {
-
   padding: 0px;
   width: 100%;
   height: 100%;
@@ -208,7 +204,7 @@ body a {
   gap: 20px;
   padding: 10px;
 }
-.exploreHolder{
+.exploreHolder {
   width: 100%;
   display: flex;
   align-items: center;
@@ -245,7 +241,7 @@ body a {
     max-width: 750px; 
   } */
 }
-.firstSection h3{
+.firstSection h3 {
   color: wheat;
   font-size: 35px;
   font-weight: 600;
@@ -258,50 +254,56 @@ body a {
   flex-direction: column;
 }
 .mission h3 {
- 
   text-align: left;
   width: 100%;
   margin: 0;
   font-weight: 800;
 }
 
-.blurBox{
+.blurBox {
   display: flex;
   align-items: center;
   height: fit-content;
   flex-direction: column;
-margin-bottom: 10px;
-  min-width:100%;
+  margin-bottom: 10px;
+  min-width: 100%;
   max-width: 1100px;
-   
-  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
-    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
-    border-radius: 10px; /* Rounded corners for the card */
-    padding: 20px; /* Adjust padding as needed */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    /* Add shine effect with linear gradient */
-    background: linear-gradient(15deg, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.2) 30%);
-    background-size: 300% 300%;
-    animation: shine 5s linear infinite;
- 
+
+  background-color: rgba(255,255,255,0.1); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+  border-radius: 10px; /* Rounded corners for the card */
+  padding: 20px; /* Adjust padding as needed */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  /* Add shine effect with linear gradient */
+  background: linear-gradient(
+    15deg,
+    rgba(255, 255, 255, 0.2) 10%,
+    rgba(255, 255, 255, 0.3) 20%,
+    rgba(255, 255, 255, 0.2) 30%
+  );
+background-size: 300% 300%;
+  animation: shine 5s linear infinite;
 }
 
-.blurBox2{
+.blurBox2 {
   display: flex;
   align-items: center;
   height: fit-content;
   flex-direction: column;
-margin-bottom: 10px;
-  min-width:100%;
+  margin-bottom: 10px;
+  min-width: 100%;
   max-width: 1100px;
-   
-  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
-    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
-    border-radius: 10px; /* Rounded corners for the card */
-    padding: 20px; /* Adjust padding as needed */
 
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+  border-radius: 10px; /* Rounded corners for the card */
+  padding: 20px; /* Adjust padding as needed */
 }
-
 
 .mission .missionImages,
 .values .valueImages {
@@ -316,7 +318,6 @@ margin-bottom: 10px;
   max-width: 700px;
 }
 
-
 .mission img,
 .values img {
   width: 300px;
@@ -325,10 +326,10 @@ margin-bottom: 10px;
   position: absolute;
 }
 
-.newSection div{
+.newSection div {
   height: fit-content;
 }
-.newSection img{
+.newSection img {
   width: 300px;
   height: auto;
   min-width: 300px;
@@ -338,13 +339,12 @@ margin-bottom: 10px;
   margin: 10px;
 }
 
-.missionImages .blackCircle{
+.missionImages .blackCircle {
   background-color: #000000;
   width: 300px;
   height: 300px;
   border-radius: 50%;
   position: absolute;
-  
 }
 
 .missionImages :nth-child(1) {
@@ -359,17 +359,16 @@ margin-bottom: 10px;
   z-index: 3;
 }
 .valueImages img {
- 
 }
 
 section.mission h3 {
-    color: #739ca2;
+  color: #739ca2;
   font-size: 25px;
   margin: 0%;
   padding: 0%;
   max-width: 900px;
 }
-section.mission h2 {   
+section.mission h2 {
   color: #efdfc1;
   font-size: 50px;
   padding: 0%;
@@ -378,7 +377,10 @@ section.mission h2 {
 }
 
 .objectives h1,
-.values h1, .about h1,.partners h1, .team h1 {
+.values h1,
+.about h1,
+.partners h1,
+.team h1 {
   font-size: 50px;
   font-weight: 900;
   color: #efdfc1;
@@ -445,9 +447,8 @@ section.mission h2 {
   justify-content: center;
 }
 
-
-
-.contactForm input, .contactForm textarea{
+.contactForm input,
+.contactForm textarea {
   width: 100%;
   padding: 14px;
   margin: 8px 0;
@@ -455,19 +456,19 @@ section.mission h2 {
   border-radius: 5px;
   border-bottom: 3px solid rgb(73, 71, 71);
 
-  
   border-radius: 0px;
   background-color: #fdfdfd00;
   height: fit-content;
   color: #efdfc1;
 }
 
-.contactForm input::placeholder,  .contactForm textarea::placeholder{
-    color: #efdfc1;
-    font-size: 20px;
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: #efdfc1;
+  font-size: 20px;
 }
 
-body .btn-primary { 
+body .btn-primary {
   background-color: #007bff00;
   color: #fff;
   border: 3px solid rgb(255, 255, 255);
@@ -492,7 +493,7 @@ body .btn-primary {
   transform: rotate(-180deg);
 }
 
-.form-group.names{
+.form-group.names {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -500,7 +501,7 @@ body .btn-primary {
   gap: 10px;
 }
 
-.linksBand{
+.linksBand {
   backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
   background-color: rgba(14, 63, 93, 0.5);
   box-shadow: 0px 0px;
@@ -515,78 +516,79 @@ body .btn-primary {
   align-items: center;
   justify-content: center;
   gap: 25px;
-
 }
 
-.linksBand i{
+.linksBand i {
   color: white;
-  font-size:35px;
+  font-size: 35px;
   transition: 0.3s ease;
   z-index: 4;
-
 }
 
-
-
-.linksBand i:hover{
- color: #739ca2;
+.linksBand i:hover {
+  color: #739ca2;
 }
 
-.reach-us{
+.reach-us {
   padding-bottom: 20px;
-  
 }
-.reach-us .contactForm{
-
+.reach-us .contactForm {
   width: 100%;
   max-width: 700px;
 }
 
-.reach-us h4{
+.reach-us h4 {
   color: #efdfc1;
   font-size: 25px;
   font-weight: 100;
   text-align: center;
   font-style: italic;
-
 }
 
-html body{
+html body {
   background-color: #ffffff;
 }
 
-#accordion .card{
+#accordion .card {
   display: flex;
   align-items: center;
   height: fit-content;
   flex-direction: column;
-margin-bottom: 10px;
-  
-  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
-    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
-    border-radius: 10px; /* Rounded corners for the card */
-    padding: 20px; /* Adjust padding as needed */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  margin-bottom: 10px;
 
-    /* Add shine effect with linear gradient */
-    background: linear-gradient(15deg, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.2) 30%);
-    background-size: 300% 300%;
-    animation: shine 5s linear infinite;
-    max-width: 900px;
-    
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+  border-radius: 10px; /* Rounded corners for the card */
+  padding: 20px; /* Adjust padding as needed */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+
+  /* Add shine effect with linear gradient */
+  background: linear-gradient(
+    15deg,
+    rgba(255, 255, 255, 0.2) 10%,
+    rgba(255, 255, 255, 0.3) 20%,
+    rgba(255, 255, 255, 0.2) 30%
+  );
+  background-size: 300% 300%;
+  animation: shine 5s linear infinite;
+  max-width: 900px;
 }
 
 @keyframes shine {
   0% {
-      background-position: 0% 300%;
+    background-position: 0% 300%;
   }
   100% {
-      background-position: 300% 0%;
-      
+    background-position: 300% 0%;
   }
 }
 
-h5 button{
+h5 button {
   background-color: transparent;
   border: none;
   padding: 10px;
@@ -594,134 +596,136 @@ h5 button{
   border-radius: 10px;
   color: #efdfc1;
 }
-div.card-body{
+div.card-body {
   color: antiquewhite;
   font-size: 20px;
-
 }
 
-span.blue{
-  color:#739ca2;
+span.blue {
+  color: #739ca2;
   font-weight: 800;
 }
 
-.valuesContainer{
+.valuesContainer {
   display: flex;
   flex-direction: row;
   width: 100%;
   max-width: 1200px;
 }
 
-@media  (max-width: 768px) {
-  .valuesContainer{
-      flex-direction: column;
-    }
-    .missionImages :nth-child(1) {
-      left: 4%;
-    }
-    .missionImages :nth-child(2) {
-      left: 14%;
-      z-index: 2;
-      /* background-color: red; */
-    }
-    .missionImages :nth-child(3) {
-      right: 0%;
-      z-index: 3;
-    }
+@media (max-width: 768px) {
+  .valuesContainer {
+    flex-direction: column;
   }
-.about .aboutBox{
-
+  .missionImages :nth-child(1) {
+    left: 4%;
+  }
+  .missionImages :nth-child(2) {
+    left: 14%;
+    z-index: 2;
+    /* background-color: red; */
+  }
+  .missionImages :nth-child(3) {
+    right: 0%;
+    z-index: 3;
+  }
 }
-  .about p.blurBox{
-    width: 100%;
-    max-width: 1100px;
-   
-    }
-    .image-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr; /* Create a 2-column grid */
-      gap: 20px; /* Add some spacing between the elements */
-    }
-    
-    .main-image {
-      grid-column: span 2; /* Span two columns for the main image */
-      text-align: center; /* Center the main image */
-    }
-    
-    .image-grid img {
-      max-width: 100%;
-      height: auto;
-      display: block; /* Remove extra space under inline images */
-    }
-    
-   .stacked-images {
-      display: flex;
-      flex-direction: row; 
-      justify-content: center; 
-      align-items: center; 
-      background-color: red;
-      min-width: 100%;
-    }
-    .partners-section {
-      background-color: #f5f5f5;
-      padding: 40px 0;
-      text-align: center;
-    }
-    
-    .partners-container, .team-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      overflow: hidden;
-      white-space: nowrap;
-      animation: scroll 20s linear infinite;
-    }
-    .team-container{
-      animation: scrollLeft 20s linear infinite;
-    }
-    .partner, .teamMember {
-      border-radius: 5px;
-      background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
-    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
-    border-radius: 10px; /* Rounded corners for the card */
-    padding: 7px; /* Adjust padding as needed */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+.about p.blurBox {
+  width: 100%;
+  max-width: 1100px;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Create a 2-column grid */
+  gap: 20px; /* Add some spacing between the elements */
+}
 
-    /* Add shine effect with linear gradient */
-    height: fit-content;
-      text-align: center;
-      margin: 0 20px;
-      width: fit-content;
-      display: inline-block;
-    }
-    
-    .partner img, .teamMember img{
-      max-width: 300px;
-      height: auto;
-      margin: 10px auto;
-    }
-    
-    /* Keyframes animation for infinite scrolling */
-    @keyframes scroll {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-    @keyframes scrollLeft {
-      0% {
-        transform: translateX(-100%);
-      }
-      100% {
-        transform: translateX(100%);
-      }
-    }
+.main-image {
+  grid-column: span 2; /* Span two columns for the main image */
+  text-align: center; /* Center the main image */
+}
 
-    /* loader */
+.image-grid img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Remove extra space under inline images */
+}
 
-    
+.stacked-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  min-width: 100%;
+}
+.partners-section {
+  background-color: #f5f5f5;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.partners-container,
+.team-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+.team-container {
+  animation: scrollLeft 20s linear infinite;
+}
+.partner,
+.teamMember {
+  border-radius: 5px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+  border-radius: 10px; /* Rounded corners for the card */
+  padding: 7px; /* Adjust padding as needed */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+
+  /* Add shine effect with linear gradient */
+  height: fit-content;
+  text-align: center;
+  margin: 0 20px;
+  width: fit-content;
+  display: inline-block;
+}
+
+.partner img,
+.teamMember img {
+  max-width: 300px;
+  height: auto;
+  margin: 10px auto;
+}
+
+/* Keyframes animation for infinite scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* loader */
+
 .back-to-top {
   position: fixed;
   display: none;
@@ -730,28 +734,27 @@ span.blue{
   z-index: 99;
 }
 
-
 /*** Spinner ***/
 #spinner {
   opacity: 0;
   visibility: hidden;
-  transition: opacity .5s ease-out, visibility 0s linear .5s;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
   z-index: 99999;
 }
 
 #spinner.show {
-  transition: opacity .5s ease-out, visibility 0s linear 0s;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
   visibility: visible;
   opacity: 1;
 }
-
 
 /*** Youtube Video ***/
 .video {
   position: relative;
   height: 100%;
   min-height: 500px;
-  background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1)), url(../img/RCC_CBU.jpg);
+  background: linear-gradient(rgba(15, 23, 43, 0.1), rgba(15, 23, 43, 0.1)),
+    url();
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -821,7 +824,6 @@ span.blue{
   border-top: 22px solid transparent;
   border-bottom: 22px solid transparent;
 }
-
 
 /* items for sale css */
 

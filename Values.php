@@ -16,6 +16,8 @@ session_start(); // Start a session
     <title>Arcus Adminstrator</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/.css">
+    
 </head>
 
 <body class="valuesBg">
