@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Tayantpay Admin</title>
+    <title>Arcus Admin</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="/img/favicon.ico" rel="icon" />
+    <link href="/assets/ArcusLogo.png" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -48,8 +48,6 @@
         </div>
       </div> -->
         <!-- Spinner End -->
-
-
 
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
@@ -120,7 +118,7 @@
                             <span class="">
                                 <a href="./viewScripts/events.php">View Events</a>
                             </span>
-                            <span class="" id="events">Events</span>
+                            Events
                             <span class="">
                                 <a href="./uploadScripts/upload_event.php">Upload Event</a>
                             </span>
@@ -130,7 +128,7 @@
                             <span class="">
                                 <a href="./viewScripts/projects.php">View Projects</a>
                             </span>
-                            <span class=" " id="projects">Projects</span>
+                            Projects
                             <span class="">
                                 <a href="./uploadScripts/upload_project.php">Upload Project</a>
                             </span>
@@ -140,7 +138,7 @@
                             <span class="">
                                 <a href="./viewScripts/messages.php">View Messages</a>
                             </span>
-                            <span class="" id="">Messages</span>
+                            Messages
                             <span class="">
                                 <a href="./uploadScripts/publish_message.php">Publish Message</a>
                             </span>
